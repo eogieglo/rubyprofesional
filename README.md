@@ -1,17 +1,17 @@
 # README
 
-Es proyecto se creo con la version rails 6.1.4 con el comando
+# Este proyecto se creo con la version rails 6.1.4 con el comando
 
-# rails _6.1.4_ new authenticator
+* rails _6.1.4_ new authenticator
 
-* Ruby version
+# Ruby version
  
-# ruby-2.7.2
+* ruby-2.7.2
 
-* System dependencies
+# System dependencies
  
-# Verificar archivo Gemfile y package.json
+* Verificar archivo Gemfile y package.json
 
-* Deployment instructions
+# Deployment instructions
 
-# rails server
+* rails server
