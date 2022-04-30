@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/hello", to: "main#hello"
 
+  # Usaremos el metodo root para definir el path de inicio
+
+  root to: "main#hello"
+
   # Por convencion la primera parte del path es el controlador
   # y la segunda el metodo
   get "/cursos/gratuitos"
