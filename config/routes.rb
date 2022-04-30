@@ -3,15 +3,8 @@ Rails.application.routes.draw do
   get "/hello", to: "main#hello"
 
   # Usaremos el metodo root para definir el path de inicio
-
   root to: "main#hello"
 
-  # Por convencion la primera parte del path es el controlador
-  # y la segunda el metodo
-  get "/cursos/gratuitos"
-  # cursos_controller 
-  # En el archivo veriamos CursosController def gratuitos end
-
-  get "cursos", to: "courses#index"
-  # Buscara Rails lo mismo
+  get "saludo", to: "main#hi"
+  post "hi", to: "main#greetings" 
 end

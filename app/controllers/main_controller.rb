@@ -3,4 +3,12 @@ class MainController < ApplicationController
         
     end
 
+    def hi
+       
+    end
+
+    def greetings
+        @name = params[:name]   
+    end
+
 end
