@@ -1,34 +1,13 @@
 <h1>Hola Mundo</h1>
 
-<p>Ejemplos del video</p>
+<p>Ejemplo con href</p>
+<a href="/">Inicio</a>
+<p>Ejemplo con link_to</p>
+<%= link_to "Inicio", "/" %>
+<p>Ejemplo con root_url</p>
+<%= root_url %>
+<p>Ejemplo con root_path</p>
+<%= root_path %>
 
-<p>Impresion de suma</p>
-
-<% 1 + 1 %>
-
-<%= 1 + 1 %>
-
-<p>Impresion en bucle del 1 al 10</p>
-
-<% 10.times do |i| %>
-    <p><%= i %></p>
-<% end %>
-
-<p>Impresion si es TRUE, si es FALSE no se muestro en condicionales</p>
-
-<% if true %>
-    <p>Hola mundo</p>
-<% end %>
-
-<% if false %>
-    <p>Hola mundo</p>
-<% end %>
-
-<p>Trabajando con ARREGLOS</p>
-
-<% [1,2,3].each do |i| %>
-    <p><%= i %></p>
-    <p><%= i %></p>
-    <p><%= i %></p>
-    <p><%= i %></p>
-<% end %>
+<p>Reescribimos el link_to con root path</p>
+<%= link_to "Inicio", root_path %>
