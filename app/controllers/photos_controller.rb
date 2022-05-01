@@ -33,5 +33,13 @@ class PhotosController < ApplicationController
         #redirect_to "/photos/#{photo.id}"
         redirect_to photo
     end
+
+    # DELETE /photos/:id
+    def destroy
+        photo = Photo.find( params[:id] )
+        photo.destroy
+
+        redirect_to "/photos"
+    end
     
 end
