@@ -9,6 +9,21 @@ class PhotosController < ApplicationController
     def new
 
     end
+    
+    # /photos/:id/edit
+    def edit
+        @id = params[:id]
+    end
+
+    # PUT/PATCH /photos/:id
+    def update
+        photo = Photo.find( params[:id] )
+        photo.title = params[:photo][:title]
+        photo.image_url = params[:photo][:image_url]
+        photo.save
+        #redirect_to "/photos/#{photo.id}"
+        redirect_to photo
+    end
 
     def create
         photo = Photo.new
