@@ -1,0 +1,10 @@
+POST http://localhost:3000/photos HTTP/1.1
+Content-Type: application/json
+
+{
+    "photo":{
+        "title": "Mi Titulo",
+        "image_url": "algo.jpg"
+    },
+    "arreglo": ["1","2"]
+}

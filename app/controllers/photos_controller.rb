@@ -1,5 +1,8 @@
 class PhotosController < ApplicationController
+    skip_before_action :verify_authenticity_token
+
     def index
+        puts params[:nombre]
         @photos = Photo.all
     end
 
@@ -32,12 +35,17 @@ class PhotosController < ApplicationController
     end
 
     def create
+=begin 
         photo = Photo.new
         photo.title = params[:photo][:title]
         photo.image_url = params[:photo][:image_url]
         photo.save
         #redirect_to "/photos/#{photo.id}"
-        redirect_to photo
+        redirect_to photo 
+=end
+        @photo = Photo.new(params[:photo])
+        @photo.save
+
         respond_to do |format|
             format.html { redirect_to "/photos" }
             format.json { render json: @photo, status: :created }
