@@ -1,8 +1,11 @@
 class PhotosController < ApplicationController
     def index
-
+        @photos = Photo.all
     end
 
+    def show
+        @photo = Photo.find( params[:id] )
+    end
     def new
 
     end
@@ -12,6 +15,8 @@ class PhotosController < ApplicationController
         photo.title = params[:photo][:title]
         photo.image_url = params[:photo][:image_url]
         photo.save
+        #redirect_to "/photos/#{photo.id}"
+        redirect_to photo
     end
     
 end

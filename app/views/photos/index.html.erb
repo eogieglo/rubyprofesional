@@ -1,1 +1,9 @@
-<h1>Hola desde photos.html.erb</h1>
+<h1>Fotos</h1>
+
+<% @photos.each do |photo| %>
+    <div>
+    <h2><%= photo.title %></h2>
+    <%= image_tag photo.image_url %>
+    <%= link_to "Ver mas", photo %>
+    </div>
+<% end %>
